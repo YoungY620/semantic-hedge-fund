@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HedgeCandidate",
+  "type": "object",
+  "required": [
+    "exposure",
+    "instrument",
+    "position_direction",
+    "bad_state",
+    "expected_hedge_payoff",
+    "settlement_rule_summary",
+    "basis_risk",
+    "liquidity_notes",
+    "fit_rating"
+  ],
+  "properties": {
+    "exposure": {
+      "type": "string"
+    },
+    "instrument": {
+      "type": "string"
+    },
+    "position_direction": {
+      "type": "string",
+      "enum": ["long_yes", "long_no", "short", "long", "spread", "other"]
+    },
+    "bad_state": {
+      "type": "string"
+    },
+    "expected_hedge_payoff": {
+      "type": "string"
+    },
+    "settlement_rule_summary": {
+      "type": "string"
+    },
+    "basis_risk": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "liquidity_notes": {
+      "type": "string"
+    },
+    "fit_rating": {
+      "type": "string",
+      "enum": ["excellent", "good", "weak", "reject", "unknown"]
+    }
+  },
+  "additionalProperties": true
+}
