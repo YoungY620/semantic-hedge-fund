@@ -94,6 +94,12 @@
 | Missing fact | Why it matters | How to verify | Priority |
 |---|---|---|---|
 |  |  |  | high/medium/low |
+
+## Final Concrete Holdings
+
+| Holding | Type | Platform / venue | Direction token or side | Target weight | Current status | Why this instrument | Thesis linkage | Source |
+|---|---|---|---|---:|---|---|---|---|
+|  | token / equity / cash / prediction market |  | long / short / YES / NO / cash |  | active / unverified / unknown |  |  |  |
 ```
 
 ## Watchlist Entry

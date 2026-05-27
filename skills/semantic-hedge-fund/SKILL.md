@@ -52,6 +52,7 @@ Do not design a standalone app, broker integration, autonomous fund, or trade ex
    - short process trace from user view -> exposure decomposition -> scoring -> allocation
    - compact tables for portfolio thesis, exposures, candidate hedges, rejected hedges, basis risk, missing facts, source links, and next actions
    - allocation tables that show each instrument's role, selection reason, sizing rationale, and calculation inputs
+   - a final concrete holdings table with instrument or active prediction-market question, direction token, target weight, rationale, and thesis linkage
    - optional watchlist table
 
 5. Only mark a market as actionable research after hedge fit is at least `good` and the settlement rule is known. Do not prepare or place orders.
@@ -67,6 +68,13 @@ user thesis -> interpreted economic exposure -> wanted/unwanted exposures -> can
 ```
 
 When proposing a portfolio, include a sizing table. Show the calculation principle, even when the numbers are first-pass discretionary weights rather than optimized outputs. Prefer explicit score columns such as thesis fit, value capture, liquidity, risk penalty, hedge usefulness, and final normalized weight.
+
+Every portfolio-style answer must end with a concrete holdings table. Do not end only with themes, sectors, or abstract exposures. Each row must identify either:
+
+- a concrete asset, token, equity, cash instrument, or fund proxy; or
+- a currently active prediction market with platform, exact question, direction token (`YES` or `NO`), source link, and target weight.
+
+If current market status, price, or liquidity has not been verified in the turn, mark those fields as `unverified` or `unknown` instead of presenting them as current.
 
 ## Ratings
 
