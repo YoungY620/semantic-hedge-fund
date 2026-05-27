@@ -49,17 +49,24 @@ Do not design a standalone app, broker integration, autonomous fund, or trade ex
    - scenario coverage
 
 4. Produce a concise report:
-   - portfolio thesis
-   - unwanted exposure list
-   - candidate hedges
-   - rejected hedges and why
-   - basis-risk notes
-   - missing facts
-   - next research actions
-   - source links
-   - optional watchlist entry
+   - short process trace from user view -> exposure decomposition -> scoring -> allocation
+   - compact tables for portfolio thesis, exposures, candidate hedges, rejected hedges, basis risk, missing facts, source links, and next actions
+   - allocation tables that show each instrument's role, selection reason, sizing rationale, and calculation inputs
+   - optional watchlist table
 
 5. Only mark a market as actionable research after hedge fit is at least `good` and the settlement rule is known. Do not prepare or place orders.
+
+## Output Style
+
+Default to dense, decision-useful tables instead of long prose. Use prose only for the minimum context needed to explain the user's thesis, the decomposition path, and key judgment calls.
+
+Every report must briefly explain the reasoning path:
+
+```text
+user thesis -> interpreted economic exposure -> wanted/unwanted exposures -> candidate instruments -> score or weighting method -> final weights and hedges
+```
+
+When proposing a portfolio, include a sizing table. Show the calculation principle, even when the numbers are first-pass discretionary weights rather than optimized outputs. Prefer explicit score columns such as thesis fit, value capture, liquidity, risk penalty, hedge usefulness, and final normalized weight.
 
 ## Ratings
 

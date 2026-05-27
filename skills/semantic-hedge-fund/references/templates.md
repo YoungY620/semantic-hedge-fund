@@ -5,26 +5,20 @@
 ```markdown
 ## Asset Capsule
 
-Asset:
+| Field | Value |
+|---|---|
+| Asset / theme |  |
+| User thesis |  |
+| Interpreted economic exposure |  |
+| Time horizon |  |
+| Payoff drivers |  |
+| Invalidation conditions |  |
+| Unknowns / missing facts |  |
 
-Thesis:
-
-Time horizon:
-
-Wanted exposures:
-- 
-
-Unwanted exposures:
-- 
-
-Unknown exposures / missing facts:
-- 
-
-Payoff drivers:
-- 
-
-Invalidation conditions:
-- 
+| Exposure type | Exposure | Why it matters | Desired treatment |
+|---|---|---|---|
+| Wanted |  |  | Keep / increase |
+| Unwanted |  |  | Hedge / reduce |
 ```
 
 ## Hedge-Fit Scorecard
@@ -32,29 +26,19 @@ Invalidation conditions:
 ```markdown
 ## Hedge Fit
 
-Exposure:
-
-Candidate prediction-market contract:
-
-Position direction:
-
-Bad state:
-
-Expected hedge payoff:
-
-Settlement-rule match:
-
-Timing match:
-
-Liquidity / spread:
-
-Source links:
-- 
-
-Basis risk:
-- 
-
-Rating: excellent | good | weak | reject | unknown
+| Field | Value |
+|---|---|
+| Exposure |  |
+| Candidate market |  |
+| Position direction | YES / NO / unknown |
+| Bad state |  |
+| Expected hedge payoff |  |
+| Settlement-rule match | excellent / good / weak / reject / unknown |
+| Timing match | excellent / good / weak / reject / unknown |
+| Liquidity / spread |  |
+| Source links |  |
+| Basis risk |  |
+| Rating | excellent / good / weak / reject / unknown |
 ```
 
 ## Research Report
@@ -62,21 +46,54 @@ Rating: excellent | good | weak | reject | unknown
 ```markdown
 # Semantic Hedge Report
 
-## Portfolio Thesis
+## Process Trace
 
-## Unwanted Exposures
+| Step | Result |
+|---|---|
+| User view |  |
+| Interpreted thesis |  |
+| Exposure decomposition |  |
+| Candidate universe |  |
+| Scoring / sizing method |  |
+| Final decision |  |
 
-## Candidate Hedges
+## Exposure Map
 
-## Rejected Hedges
+| Exposure | Wanted? | Why it affects PnL | Hedge or expression | Confidence |
+|---|---:|---|---|---|
+|  | yes/no |  |  | high/medium/low |
 
-## Basis Risk
+## Portfolio / Instrument Selection
 
-## Missing Facts
+| Instrument | Role | Selection reason | Thesis fit | Value capture | Liquidity | Risk penalty | Raw score | Target weight | Sizing rationale |
+|---|---|---|---:|---:|---:|---:|---:|---:|---|
+|  | core / satellite / hedge / cash |  |  |  |  |  |  |  |  |
 
-## Watchlist
+## Weight Calculation
 
-## Next Actions
+| Formula item | Meaning | Value / note |
+|---|---|---|
+| Raw score | thesis_fit + value_capture + liquidity + hedge_usefulness - risk_penalty |  |
+| Normalization | raw_score / sum(raw_scores) among included instruments |  |
+| Constraints | max single-name weight, cash floor, illiquidity cap, hedge overlay limit |  |
+
+## Candidate Prediction-Market Hedges
+
+| Market | Platform | Bad state covered | Direction | Price / spread | Liquidity | Settlement fit | Timing fit | Basis risk | Rating | Source |
+|---|---|---|---|---|---|---|---|---|---|---|
+|  | Polymarket / Kalshi |  | YES / NO |  |  |  |  |  |  |  |
+
+## Rejected / Weak Hedges
+
+| Market or instrument | Rejection reason | What would change the rating | Source |
+|---|---|---|---|
+|  |  |  |  |
+
+## Missing Facts And Next Checks
+
+| Missing fact | Why it matters | How to verify | Priority |
+|---|---|---|---|
+|  |  |  | high/medium/low |
 ```
 
 ## Watchlist Entry
